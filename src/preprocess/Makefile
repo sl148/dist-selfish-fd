@@ -74,9 +74,8 @@ DEPEND = g++ -MM
 ## (POSTLINKOPT are options that appear *after* all object files.)
 
 CCOPT  =
-CCOPT += -m32
 CCOPT += -g
-CCOPT += -Wall -W -Wno-sign-compare -Wno-deprecated -ansi -pedantic -Werror
+CCOPT += -Wall -W -Wno-sign-compare -Wno-deprecated -Wno-error
 
 ## The following lines contain workarounds for bugs when
 ## cross-compiling to 64 bit on 32-bit systems using gcc 4.4 or gcc
@@ -96,7 +95,6 @@ ifdef HAVE_GCC_4_5
 endif
 
 LINKOPT  =
-LINKOPT += -m32
 LINKOPT += -g
 
 POSTLINKOPT =
@@ -119,7 +117,8 @@ LINKOPT_PROFILE  = -pg
 # LINKOPT_PROFILE += -lc_p
 
 ifeq ($(LINK_RELEASE_STATICALLY), 1)
-LINKOPT_RELEASE += -static -static-libgcc
+# Disabled: 64-bit static linking is awkward without libc.a / libstdc++.a installed.
+# LINKOPT_RELEASE += -static -static-libgcc
 endif
 
 POSTLINKOPT_RELEASE  =

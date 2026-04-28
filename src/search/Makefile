@@ -175,8 +175,7 @@ DEPEND = g++ -MM
 
 CCOPT = -Iext
 CCOPT += -g
-CCOPT += -m32
-CCOPT += -Wall -W -Wno-sign-compare -Wno-deprecated -ansi -pedantic -Werror -DSTATE_VAR_BYTES=$(STATE_VAR_BYTES)
+CCOPT += -std=gnu++03 -Wall -W -Wno-sign-compare -Wno-deprecated -Wno-error -Wno-write-strings -DSTATE_VAR_BYTES=$(STATE_VAR_BYTES)
 
 ## The following lines contain workarounds for bugs when
 ## cross-compiling to 64 bit on 32-bit systems using gcc 4.4 or gcc
@@ -201,7 +200,6 @@ ifdef HAVE_GCC_4_6
 endif
 
 LINKOPT  = -g
-LINKOPT += -m32
 LINKOPT +=
 
 POSTLINKOPT = -lpthread -lrt 
@@ -227,15 +225,12 @@ POSTLINKOPT_DEBUG   =
 POSTLINKOPT_PROFILE =
 
 ifeq ($(LINK_RELEASE_STATICALLY), 1)
-LINKOPT_RELEASE += -static -static-libgcc
+# Disabled for 64-bit local builds: static libstdc++/libc archives may not be present.
+# LINKOPT_RELEASE += -static -static-libgcc
 endif
 
 ifeq ($(OS), linux)
-ifeq ($(LINK_RELEASE_STATICALLY), 0)
 LINKOPT_RELEASE += -lrt
-else
-POSTLINKOPT_RELEASE += -Wl,-Bstatic -lrt
-endif
 LINKOPT_DEBUG  += -lrt
 LINKOPT_PROFILE += -lrt
 # LINKOPT_PROFILE += -lc_p

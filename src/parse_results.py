@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 import sys
 
@@ -27,5 +27,5 @@ for file in range(int(sys.argv[1])):
   #print expanded, generated, messages, time
   # Close the file
   f.close() 
-print "Expanded Generated messages max_time sum_time cost init_h"
-print expanded, generated, messages, max_time, sum_time, plan_length, init_h
+print("Expanded Generated messages max_time sum_time cost init_h")
+print(expanded, generated, messages, max_time, sum_time, plan_length, init_h)

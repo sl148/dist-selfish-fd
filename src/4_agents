@@ -2,5 +2,5 @@
 ./search/downward --search "astar(lmcut())" --agents 1 < output > 1 &
 ./search/downward --search "astar(lmcut())" --agents 2 < output > 2 &
 ./search/downward --search "astar(lmcut())" --agents 3 < output > 3
-python parse_results.py 4
+python3 parse_results.py 4
 

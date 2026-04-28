@@ -1,0 +1,79 @@
+Dispatcher selected state size 1.
+This is a unit task.
+Simplifying transitions... done!
+running search for selfish agents, agent id is 0
+Opening agent names configuration file: agents
+number of agents is: 4
+agent 0: rover0
+agent 1: rover1
+agent 2: rover2
+agent 3: rover3
+Closed agent names configuration file
+Updating public and private actions... 
+public: 78, private: 181
+running search for selfish agents, agent id is 0
+Opening agent names configuration file: agents
+number of agents is: 4
+agent 0: rover0
+agent 1: rover1
+agent 2: rover2
+agent 3: rover3
+Closed agent names configuration file
+Updating public and private actions... 
+public: 78, private: 181
+Opening communication file: comm
+configuring agent 0
+Adding agent 0 with address 127.0.0.1:3010
+Adding agent 1 with address 127.0.0.1:3011
+Adding agent 2 with address 127.0.0.1:3012
+Adding agent 3 with address 127.0.0.1:3013
+Listening to agent 127.0.0.1:3011
+Listening to agent 127.0.0.1:3012
+MAComm successfuly connected
+Agent 0 conducting best first search with reopening closed nodes, (real) bound = 2147483647
+Initializing landmark cut heuristic...
+Listening to agent 127.0.0.1:3013
+f = 9 [1 evaluated, 0 expanded, t=0s]
+Best heuristic value: 9 [g=0, 1 evaluated, 0 expanded, t=0s]
+f = 10 [3 evaluated, 1 expanded, t=0s]
+f = 11 [9 evaluated, 3 expanded, t=0s]
+Best heuristic value: 8 [g=3, 17 evaluated, 8 expanded, t=0s]
+Best heuristic value: 7 [g=4, 19 evaluated, 8 expanded, t=0s]
+f = 12 [58 evaluated, 23 expanded, t=0s]
+Best heuristic value: 6 [g=5, 110 evaluated, 39 expanded, t=0s]
+Best heuristic value: 5 [g=6, 121 evaluated, 43 expanded, t=0s]
+Best heuristic value: 4 [g=8, 281 evaluated, 115 expanded, t=0.01s]
+Best heuristic value: 3 [g=10, 511 evaluated, 204 expanded, t=0.02s]
+f = 13 [537 evaluated, 212 expanded, t=0.02s]
+f = 14 [2016 evaluated, 817 expanded, t=0.07s]
+Best heuristic value: 2 [g=13, 4067 evaluated, 1720 expanded, t=0.15s]
+f = 15 [6443 evaluated, 2759 expanded, t=0.26s]
+f = 16 [18109 evaluated, 8052 expanded, t=0.73s]
+Best heuristic value: 1 [g=16, 23302 evaluated, 10309 expanded, t=0.92s]
+f = 17 [42845 evaluated, 20011 expanded, t=1.77s]
+f = 18 [96845 evaluated, 47031 expanded, t=3.87s]
+Best heuristic value: 0 [g=19, 251716 evaluated, 130717 expanded, t=8.59s]
+f = 19 [257026 evaluated, 133562 expanded, t=8.85s]
+Sending confirmation of solution to agent 1
+f = 20 [539323 evaluated, 293788 expanded, t=15.83s]
+received termination message
+Actual search time: 17.68s [t=17.68s]
+Not saving plan yet, since traceback is not yet implemented.
+Initial state h value: 9.
+Expanded 338873 state(s).
+Reopened 0 state(s).
+Evaluated 625097 state(s).
+Evaluations: 625097
+Generated 1275615 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 293788 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 539323 state(s).
+Generated until last jump: 1106336 state(s).
+Search space hash size: 625097
+Search space hash bucket count: 786433
+Search time: 17.68s
+Total time: 17.68s
+Messages sent: 216787
+Messages received: 160537
+Peak memory: -1 KB

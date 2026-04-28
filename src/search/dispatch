@@ -1,7 +1,7 @@
 #!/bin/sh
 # $1 - preprocessor output file
 
-gawk '{
+awk '{
           if ($1 == "begin_state") {
                if (max <= 255)
                    print 1;
